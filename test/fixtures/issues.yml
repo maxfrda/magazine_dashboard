@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cover_image_url: MyString
+  publication_date: 2024-09-10
+  subscribers_count: 1
+  number_of_pages: 1
+
+two:
+  cover_image_url: MyString
+  publication_date: 2024-09-10
+  subscribers_count: 1
+  number_of_pages: 1
