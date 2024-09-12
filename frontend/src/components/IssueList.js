@@ -19,17 +19,16 @@ const IssueList = ({ issues, magazineId, setIssues }) => {
 
   const handleSave = async (updatedIssue) => {
     try {
-      const response = await axios.put(`http://localhost:3000/issues/${updatedIssue.id}`, updatedIssue);
+      const response = await axios.put(`http://localhost:3000/magazines/${magazineId}/issues/${updatedIssue.id}`, updatedIssue);
       const updatedIssueList = issues.map(issue =>
         issue.id === response.data.id ? response.data : issue
       );
-      setIssues(magazineId, updatedIssueList); // Pass magazineId to update issues
+      setIssues(updatedIssueList); // Update the issue list state directly
       handleCloseModal();
     } catch (error) {
       console.error('Error updating issue:', error);
     }
   };
-
   return (
     <div className="bg-[#1F2420] p-8">
       <ul className="flex flex-wrap justify-center gap-8">
