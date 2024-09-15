@@ -42,12 +42,12 @@ const IssueList = ({ issues, magazineId, setIssues }) => {
   };
 
   return (
-    <div className="bg-[#1F2420] p-8">
+    <div className="p-8">
       <ul className="flex flex-wrap justify-center gap-8">
         {issues.map(issue => (
           <li 
             key={issue.id} 
-            className="relative flex flex-col items-center transform transition-transform duration-300 ease-in-out hover:scale-105 group"
+            className="relative flex flex-col bg-gray-700 p-4 rounded-lg  items-center transform transition-transform duration-300 ease-in-out hover:scale-105 group"
           >
             <div className="w-[280px] relative">
               {issue.cover_image_url ? (
