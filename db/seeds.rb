@@ -39,7 +39,7 @@ cover_image_urls.each_with_index do |url, index|
     magazine: magazine,
     cover_image: blob,
     publication_date: Faker::Date.between(from: '2023-01-01', to: '2024-12-31'),
-    subscribers_count: Faker::Number.between(from: 1000, to: 5000),
+    copies_sold: Faker::Number.between(from: 1000, to: 5000),
     number_of_pages: Faker::Number.between(from: 30, to: 150)
   )
 
@@ -77,7 +77,7 @@ cover_image_urls.each_with_index do |url, index|
     magazine: magazine,
     cover_image: blob,
     publication_date: Faker::Date.between(from: '2023-01-01', to: '2024-12-31'),
-    subscribers_count: Faker::Number.between(from: 1000, to: 5000),
+    copies_sold: Faker::Number.between(from: 1000, to: 5000),
     number_of_pages: Faker::Number.between(from: 30, to: 150)
   )
 

@@ -34,11 +34,11 @@ const IssueModal = ({ isOpen, onClose, onSave, issue }) => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Subscribers</label>
+            <label className="block text-sm font-medium text-gray-700">Copies sold</label>
             <input
               type="number"
-              name="subscribers_count"
-              value={issueData.subscribers_count}
+              name="copies_sold"
+              value={issueData.copies_sold}
               onChange={handleChange}
               required
               className="mt-1 block w-full border border-gray-300 rounded-md p-2"

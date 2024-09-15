@@ -6,7 +6,7 @@ class MagazinesController < ApplicationController
     render json: @magazines.map { |magazine|
       magazine.as_json(include: {
         issues: {
-          only: [:id, :title, :publication_date, :subscribers_count, :number_of_pages]
+          only: [:id, :title, :publication_date, :copies_sold, :number_of_pages]
         }
       }).merge({
         issues: magazine.issues.map { |issue|

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_09_11_163214) do
+ActiveRecord::Schema.define(version: 2024_09_15_214714) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -43,11 +43,12 @@ ActiveRecord::Schema.define(version: 2024_09_11_163214) do
   create_table "issues", force: :cascade do |t|
     t.string "cover_image_url"
     t.date "publication_date"
-    t.integer "subscribers_count"
+    t.integer "copies_sold"
     t.integer "number_of_pages"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "magazine_id"
+    t.string "title"
     t.index ["magazine_id"], name: "index_issues_on_magazine_id"
   end
 

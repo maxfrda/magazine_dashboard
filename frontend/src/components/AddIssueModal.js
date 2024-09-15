@@ -4,7 +4,7 @@ const AddIssueModal = ({ isOpen, onClose, onAdd }) => {
   const [issueData, setIssueData] = useState({
     title: '',
     publication_date: '',
-    subscribers_count: '',
+    copies_sold: '',
     number_of_pages: '',
     cover_image_url: '',
   });
@@ -30,17 +30,6 @@ const AddIssueModal = ({ isOpen, onClose, onAdd }) => {
         <h2 className="text-2xl font-semibold mb-4">Add Issue</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Title</label>
-            <input
-              type="text"
-              name="title"
-              value={issueData.title}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-            />
-          </div>
-          <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">Publication Date</label>
             <input
               type="date"
@@ -52,11 +41,11 @@ const AddIssueModal = ({ isOpen, onClose, onAdd }) => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Subscribers Count</label>
+            <label className="block text-sm font-medium text-gray-700">Copies Sold</label>
             <input
               type="number"
-              name="subscribers_count"
-              value={issueData.subscribers_count}
+              name="copies_sold"
+              value={issueData.copies_sold}
               onChange={handleChange}
               required
               className="mt-1 block w-full border border-gray-300 rounded-md p-2"
