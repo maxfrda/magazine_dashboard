@@ -2,7 +2,6 @@ class MagazinesController < ApplicationController
   def index
     @magazines = Magazine.includes(:issues).all
 
-    # Map the magazines and their issues, adding cover_image_url to each issue
     render json: @magazines.map { |magazine|
       magazine.as_json(include: {
         issues: {

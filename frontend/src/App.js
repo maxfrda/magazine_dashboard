@@ -4,7 +4,6 @@ import { Header } from './components/Header'
 import './App.css';
 import { MagazineList } from './components/MagazineList';
 
-// import IssueForm from './components/IssueForm';
 
 function App() {
   return (
@@ -13,8 +12,6 @@ function App() {
         <Header/>
         <Routes>
           <Route path="/" element={<MagazineList />} />
-          {/* <Route path="/add" element={<IssueForm />} /> */}
-          {/* <Route path="/edit/:id" element={<IssueForm />} /> */}
         </Routes>
       </div>
     </Router>

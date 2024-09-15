@@ -11,7 +11,6 @@ class IssuesController < ApplicationController
     end
   
     if @issue.save
-      # Include the cover_image URL in the response
       render json: @issue.as_json.merge(cover_image_url: url_for(@issue.cover_image)), status: :created
     else
       render json: @issue.errors, status: :unprocessable_entity

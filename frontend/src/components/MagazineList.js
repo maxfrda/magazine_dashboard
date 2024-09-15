@@ -73,8 +73,8 @@ export const MagazineList = () => {
               </div>
               <div className="border-t border-gray-600 pt-4">
                 <IssueList
-                  issues={magazine.issues}  // Pass each magazine's issues here
-                  magazineId={magazine.id}   // Pass the magazine ID for update reference
+                  issues={magazine.issues}  
+                  magazineId={magazine.id}  
                   setIssues={(updatedIssues) => handleIssuesUpdate(magazine.id, updatedIssues)}
                 />
               </div>

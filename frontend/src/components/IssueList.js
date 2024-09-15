@@ -24,7 +24,7 @@ const IssueList = ({ issues, magazineId, setIssues }) => {
       const updatedIssueList = issues.map(issue =>
         issue.id === response.data.id ? response.data : issue
       );
-      setIssues(updatedIssueList); // Update the issue list state directly
+      setIssues(updatedIssueList); 
       handleCloseModal();
     } catch (error) {
       console.error('Error updating issue:', error);
@@ -34,7 +34,7 @@ const IssueList = ({ issues, magazineId, setIssues }) => {
   const handleDelete = async (issueId) => {
     try {
       await axios.delete(`http://localhost:3000/magazines/${magazineId}/issues/${issueId}`);
-      const updatedIssueList = issues.filter(issue => issue.id !== issueId); // Remove deleted issue from list
+      const updatedIssueList = issues.filter(issue => issue.id !== issueId);
       setIssues(updatedIssueList);
     } catch (error) {
       console.error('Error deleting issue:', error);
@@ -62,7 +62,6 @@ const IssueList = ({ issues, magazineId, setIssues }) => {
                 </div>
               )}
 
-              {/* Pencil icon for editing */}
               <button
                 onClick={() => handleEditClick(issue)}
                 className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -70,7 +69,6 @@ const IssueList = ({ issues, magazineId, setIssues }) => {
                 <PencilIcon className="h-6 w-6 text-gray-800" />
               </button>
 
-              {/* Trash icon for deleting */}
               <button
                 onClick={() => handleDelete(issue.id)}
                 className="absolute top-12 right-2 mt-4 bg-red-500 p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
