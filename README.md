@@ -49,7 +49,7 @@ Start react server
 npm start
 ```
 
-
+You should see 2 magazines, each with a list of issues. 
 
 
 
